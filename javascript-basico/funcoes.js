@@ -155,19 +155,15 @@ console.log(teste2(10,20, callback2)); */
 const processaStatus = (status) => {
   switch(status){
     case 'pendente':
-      console.log('Pedido aguardando pagamento');
-      break;
+      return 'Pedido aguardando pagamento';
     case 'aprovado':
-      console.log('Pagamento aprovado, preparando envio');
-      break;
+      return 'Pagamento aprovado, preparando envio';
     case 'enviado':
-      console.log('Pedido a caminho!');
-      break;
+      return 'Pedido a caminho!';
     case 'entregue':
-      console.log('Pedido entregue com sucesso!');
-      break;
+      return 'Pedido entregue com sucesso!';
     default:
-      console.log('Status desconhecido');
+      return 'Status desconhecido';
   }
 }
 
@@ -190,3 +186,20 @@ const logPessoa = (pessoa, index) => {
 };
 
 pessoas.forEach(logPessoa);
+
+const bomdia = (teste1, teste2, statusMensagem) =>{console.log(`Bom dia ${teste1} e ${teste2}. ${statusMensagem}`)};
+
+bomdia('pedro','clara', processaStatus('entregue'));
+
+//Referencia para ul
+
+const ul = document.querySelector('.pessoasHTML'); //ul = unordered list
+
+const pessoasHTML = ['pedro','clara', 'vincenzo', 'julia', 'renata'];
+
+let html = ``;
+
+pessoasHTML.forEach(pessoahtml =>  html += `<li style="color: red">${pessoahtml}</li>`)
+
+console.log(html);
+ul.innerHTML = html;
