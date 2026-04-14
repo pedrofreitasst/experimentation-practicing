@@ -56,7 +56,7 @@ const fs = require('fs');
 //             await new Promise(resolve =>stream.once('drain',resolve));
             
 //         }
-//         escrito =+ tamanhoChunk;
+//         escrito += tamanhoChunk;
 //     }
 //     console.log('Arquivo criado');
 //     stream.end();
