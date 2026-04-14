@@ -40,7 +40,7 @@
 //tentando fazer por stream porque percebi que estava fazednoo mais por writefile doque or streams por si próprio
 
 const fs = require('fs');
-// const caminho = './blogs/blog2.txt';
+// const caminho = './blogs/blog1.txt';
 // const TamanhoMax = 1* 1024*1024;
 // const textoDoLoop = 'Frase em Loop\n';
 // const tamanhoChunk = Buffer.byteLength(textoDoLoop,'utf-8');
