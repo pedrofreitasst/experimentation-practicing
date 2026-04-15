@@ -1,0 +1,19 @@
+<html lang="pt-br">
+    <%- include('./partials/head.ejs')%>
+<body>
+
+    <%- include('./partials/nav.ejs')%>
+
+    <div class="criar blogs">
+        <form>
+            <label for="title">Titulo do Blog:</label>
+            <input type="text" id="title" required>
+            <label for="snippet">Snippet do Blog:</label>
+            <input type="text" id="snippet" required>
+            <label for="body">Corpo do Blog:</label>
+            <input type="text" id="body" required>
+            <button>Submit</button>
+        </form>
+    </div>
+        <%- include('./partials/foot.ejs')%>
+</body>
