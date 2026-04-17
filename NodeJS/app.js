@@ -8,7 +8,7 @@ const app = express();
 
 
 
-const uri = "mongodb://USUARIO:SENHA@ac-rxf0fio-shard-00-00.joqu1a1.mongodb.net:27017,ac-rxf0fio-shard-00-01.joqu1a1.mongodb.net:27017,ac-rxf0fio-shard-00-02.joqu1a1.mongodb.net:27017/?ssl=true&replicaSet=atlas-o9mwz2-shard-0&authSource=admin&appName=pedrofreitasst-cluster";
+const uri = "mongodb://PLACEHOLDER:PLACEHOLDER@ac-rxf0fio-shard-00-00.joqu1a1.mongodb.net:27017,ac-rxf0fio-shard-00-01.joqu1a1.mongodb.net:27017,ac-rxf0fio-shard-00-02.joqu1a1.mongodb.net:27017/?ssl=true&replicaSet=atlas-o9mwz2-shard-0&authSource=admin&appName=pedrofreitasst-cluster";
 
 const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
 
@@ -39,7 +39,7 @@ mongoose.connect(uri, clientOptions)
 
 
 
-// const dbMongo = 'mongodb+srv://pedrofreitasstdb:huaauh2121@pedrofreitasst-cluster.joqu1a1.mongodb.net/?appName=pedrofreitasst-cluster';
+// const dbMongo = 'mongodb+srv://PLACEHOLDER:PLACEHOLDER@pedrofreitasst-cluster.joqu1a1.mongodb.net/?appName=pedrofreitasst-cluster';
 
 // mongoose.connect(dbMongo)
 //     .then((result) => console.log('connected to db'))
