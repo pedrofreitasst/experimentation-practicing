@@ -1,0 +1,33 @@
+<html lang="pt-br">
+    <%-include('./partials/head.ejs')%>
+    <body>
+        <%- include("./partials/nav.ejs")%>
+
+        <div class="details content">
+            <h2><%= blog.titulo%></h2>
+            <div class="content">
+                <p><%= blog.corpo%></p>
+            </div>
+            <a class="Apagar" data-doc="<%= blog._id%>">
+                <img src="/lixeira.svg" alt="icone de apagar">
+
+            </a>
+        </div>
+
+        <%- include("./partials/foot.ejs")%>
+
+        <script>
+            const lixeira = document.querySelector('a.apagar');
+            lixeira.addEventListener('click', (e) => {
+                const endpoint = `/blogs/${lixeira.dataset.doc}`;
+
+                fetch(endpoint,{
+                    method: 'DELETE'
+                })
+                .then((response) => response.json())
+                .then((data) => window.location.href = data.redirect)
+                .catch(err => console.log(err));
+            })
+        </script>
+    </body>
+</html>

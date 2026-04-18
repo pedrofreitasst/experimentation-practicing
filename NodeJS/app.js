@@ -1,7 +1,7 @@
 const express= require('express');
 const { result } = require('lodash');
 const mongoose = require('mongoose');
-const Blog = require('./models/blog');
+const rotasBlogs = require('./rotas/rotasBlogs')
 //App express
 const app = express();
 //Conexão para MongoDB
@@ -19,9 +19,6 @@ mongoose.connect(uri, clientOptions)
 })
 .catch((err) => console.log(err));
 
-
-
-
 // async function run() {
 //   try {
 //     // Create a Mongoose client with a MongoClientOptions object to set the Stable API version
@@ -35,11 +32,7 @@ mongoose.connect(uri, clientOptions)
 // }
 // run().catch(console.dir);
 
-
-
-
-
-// const dbMongo = 'mongodb+srv://PLACEHOLDER:PLACEHOLDER@pedrofreitasst-cluster.joqu1a1.mongodb.net/?appName=pedrofreitasst-cluster';
+// const dbMongo = 'mongodb+srv://pedrofreitasstdb:huaauh2121@pedrofreitasst-cluster.joqu1a1.mongodb.net/?appName=pedrofreitasst-cluster';
 
 // mongoose.connect(dbMongo)
 //     .then((result) => console.log('connected to db'))
@@ -49,11 +42,9 @@ const morgan = require('morgan');
 //registrando engine de view
 app.set('view engine', 'ejs');
 
-
 //ouvir por pedidosimport mongodb from 'mongodb';
 
 // app.listen(3000);
-
 
 // app.use((req,res,next) =>{
 //     console.log('novo pedido feito:');
@@ -65,7 +56,7 @@ app.set('view engine', 'ejs');
 //middleware
 app.use(express.static('public'));
 app.use(morgan('dev'));
-
+app.use(express.urlencoded({extended:true}));
 app.use((req,res,next) =>{
     console.log('no próximo middleware:');
     next();
@@ -134,17 +125,18 @@ app.get('/blogs/create',(req,res) =>{
 
 //rotas de blogs
 
-app.get('/blogs', async (req,res) => {
-    try{
-        const result = await Blog.find().sort({createdAt:-1});
-        res.render('index', {titulo: 'Todos os Blogs', blogs: result})
-    } catch (erro){
-        console.log(erro);
-        res.status(500).json({mensagem:'Erro ao recuperar Blogs'});
-    }
+app.use(rotasBlogs);
 
-})
-
+// app.post('/blogs', async (req,res) =>{
+//     try{
+//             const blog = await new Blog(req.body);
+//             res.render('Blogue2 salvo com sucesso')
+//             res.redirect('/blogs');        
+//     } catch (erro){
+//         console.log(erro);
+//         res.status(500).json({mensagem:'Erro ao salvar Blog'})
+//     }
+// });
 
 
 //404 (efeito "cascata", o código vai comparar o "pedido" ao endereço nas tentativas de cima, achando, encerra e demonstra a página, se não encontrar nenhum vai ativar esse, que está "ouvindo" para qualquer pedido que for nele, onde vai devolvr o erro 404)

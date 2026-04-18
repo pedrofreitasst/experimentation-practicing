@@ -1,6 +1,6 @@
    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
     body{
-        background: rgb(0, 0, 0);
+        background: rgb(255, 255, 255);
         max-width: 1200px;
         margin: 20px auto;
         padding: 0 20px;
@@ -10,7 +10,7 @@
         margin: 0;
         padding: 0;
         text-decoration: none;
-        color: #0400ff;
+        color: #202020;
     }
     nav{
         display: flex;
@@ -33,11 +33,11 @@
         font-size: 3em;
     }
     nav p, nav a{
-        color: #ffffff;
+        color: #000000;
         font-weight: 300;
     }
     footer{
-        color: #00ff40;
+        color: #ff0095;
         text-align: center;
         margin: 80px auto 20px;
     }
@@ -51,9 +51,33 @@
     .content{
         margin-left: 20px;
     }
-/*  estilo index
-    estilo sobre 
-    estilo create  */
+    /* estilo index */
+    .blogs a{
+        display: block;
+        margin: 40px 0;
+        padding-left: 30px;
+        border-left: 6px solid crimson;
+    }
+    .blogs a:hover h3{
+        color:crimson
+    }
+    /* estilo detalhes  */
+    .details{
+        position: relative;
+    }
+    .apagar{
+        position: absolute;
+        top:0;
+        right: 0;
+        border-radius: 50%;
+        padding: 8px;
+    }
+    .apagar:hover{
+        cursor:pointer;
+        box-shadow: 6px 10px 3px rgba(0,0,0,0.2);
+    }
+
+    /* estilo create */
     .create-blog form{
         max-width: 400px;
         margin: 0 auto;
