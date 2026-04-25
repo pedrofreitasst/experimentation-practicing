@@ -1,0 +1,38 @@
+h1{
+    color: rgb(0, 255, 255);
+    background-color: rgb(92, 92, 92);
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+    text-align: center;
+}   
+
+p{
+    color: brown;
+    text-align: right;
+    line-height: 20px;
+    letter-spacing: 5px;
+    column-count: 2;
+    column-gap: 60px;
+}
+ul{
+    /* border-width: 4px;
+    border-style: dotted;
+    border-color: crimson; */
+    /* border: 4px dotted teal; */
+    border-bottom: 4px dotted orange;
+    margin: 10px;
+    padding: 10px;
+}
+
+li{
+    list-style-type: armenian;
+     text-shadow: 2px 2px lightgray;/*Da pra usar hexcode */
+
+}
+h2{
+     display: inline; /*display:inline-block */
+    margin: 50px;
+    padding: 50px;
+
+}

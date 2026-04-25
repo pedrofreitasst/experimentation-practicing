@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        <h1>HTML Forms</h1>
+
+        <form>
+            <label for="usuario" >Usuario</label>
+            <input type="text" id="usuario" name="usuario" placeholder="usuario" required>
+            <br><br>
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" placeholder="e-mail" required>
+            <br><br>
+            <label for="senha">senha</label>
+            <input type="password" id="senha" name="password" placeholder="senha" required>
+            <br><br>
+
+            <p>Selecione sua idade</p>
+            <input type="radio" name="age" value="0-25" id="option1">
+            <label for="option1">0-25</label><br>
+            <input type="radio" name="age" value="25-35" id="option2">
+            <label for="option2">25-35</label><br>
+            <input type="radio" name="age" value="35-45" id="option3">
+            <label for="option3">35-45</label><br>
+            <form action="">
+
+            <p>Selecione seu gênero</p>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Other<br>
+
+
+        <select name="question" id="question">
+            <option value="q1">What color are your eyes?</option>
+            <option value="q2">Do you believe you're free?</option>
+            <option value="q3">How does fear taste?</option>
+            <br><br>
+        </select>
+            <label for="">securityQuestionAnswer</label>
+            <input type="text" id="answer" name="answer">
+        <br><br>
+        <label for="bio">Sua Bio</label>
+        <br>
+        <textarea name="bio" id="bio" placeholder="Sobre Você:"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="submit the form">
+        </form>        
+    </body>
+</html>

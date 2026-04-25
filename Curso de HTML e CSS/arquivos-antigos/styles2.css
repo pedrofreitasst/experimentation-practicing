@@ -1,0 +1,32 @@
+ p{
+    color: red;
+ }
+
+ p.teste{
+    color: blue;
+    border: inherit;
+    padding: inherit;
+ }
+
+ p.teste.testado{
+    color:lime;
+    border: 1px dashed red;
+    display: inline;
+ }
+ div#conteudo{
+    background-color: black;
+    padding: 20px;
+    border-bottom: 5px dotted #ff00f2;
+ }
+
+ div p.teste{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+
+ a[href*="linkedin"]{ /*href$ serve para achar coisas no final do href, como por exemplo que terminam com .pdf  */
+    background-color: rgb(229, 255, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 50px;
+ }
