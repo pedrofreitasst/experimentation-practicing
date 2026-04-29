@@ -1,0 +1,11 @@
+{
+  "blogs": [
+    {
+      "title": "Teste 1 do blog",
+      "body": "Blog 1 teste corpo",
+      "author": "mario",
+      "id": "WyEr4OAU77Q"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
